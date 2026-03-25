@@ -1,0 +1,281 @@
+/* FormaLine — Page d'accueil */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cache-visuellement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+  background: #ffffff;
+  line-height: 1.5;
+  width: 100%;
+  position: relative;
+}
+
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+}
+
+/* Dégradé vers l’extérieur à gauche */
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;     /* dépasse vers l’extérieur */
+  width: 25px;     /* largeur du dégradé */
+  height: 100%;
+  background: linear-gradient(to left, rgba(207, 207, 207, 0.25), transparent);
+  pointer-events: none;
+}
+
+/* Dégradé vers l’extérieur à droite */
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25px;    /* dépasse vers l’extérieur */
+  width: 25px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(207, 207, 207, 0.25), transparent);
+  pointer-events: none;
+}
+
+a {
+  color: #4db8e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.entete-site {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo img { width: 200px; height: auto; display: block; }
+
+.navigation { display: flex; gap: 30px; list-style: none; }
+
+.navigation a { font-size: 20px; font-weight: 600; padding-bottom: 6px; }
+
+
+.promotion {
+  background: #b5d333;
+  height: auto;
+
+}
+
+.promotion-interne {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.promotion-image {
+  flex: 1 1 380px;
+  max-width: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.promotion-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.promotion-contenu {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cercle-promotion {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cercle-promotion span {
+  font-size: 70px;
+  font-weight: 800;
+  color: #29abe2;
+  letter-spacing: -0.02em;
+}
+
+.apropos {
+  max-width:100%;
+  height: 400px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: grid;
+  background: #ffffff;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .apropos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.conteneur-photo {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.conteneur-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align:middle;
+}
+
+.vague-photo {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: -2px;
+}
+
+.texte-apropos {
+  border-top: 3px solid #29abe2;
+  border-bottom: 3px solid #29abe2;
+  padding: 24px 0;
+  margin-right: 30px;
+}
+
+.texte-apropos p {
+  margin: 0 0 16px;
+  color: #9bc53d;
+  font-size: 17px;
+}
+
+.texte-apropos p:last-child {
+  margin-bottom: 0;
+}
+
+.barre-competences {
+  background: #29abe2;
+  color: #ffffff;
+  height: 80px;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  border-top: #9bc53d 4px solid;
+  border-bottom: #9bc53d 4px solid;
+}
+.barre-competences h3 {
+  margin: 4px;
+}
+.space {
+  height: 35px;
+}
+.pied-page {
+  background: #b5d333;
+  border-top: 3px solid #ffffff;
+  margin-top: 0;
+}
+
+.trait {
+  width: 100%;
+  height: 20px;
+  margin-top: 50px;
+}
+.pied-page-interne {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.marque-pied img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.copyright-pied {
+  flex: 1 1 auto;
+  text-align: center;
+  color: #ffffff;
+  font-size: 13px;
+  margin: 0;
+  min-width: 200px;
+}
+
+.navigation-pied {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.navigation-pied a {
+  color: #ffffff;
+  display: block;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-right: 140px;
+}
+
+.navigation-pied a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: center;
+}

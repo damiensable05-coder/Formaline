@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormaLine — Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="entete-site">
+        <a class="logo" href="acceuil.html"
+        ><img src="images/logo.png" alt="FormaLine"
+      /></a>
+      <nav aria-label="Navigation principale">
+        <ul class="navigation">
+          <li><a href="acceuil.html">Accueil</a></li>
+          <li><a href="produits.html">Produits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <img id="line-39" src="images/Line-39.png" alt="Line-39"/>
+      </nav>
+      </header>
+
+      <div class="separateur" aria-hidden="true">
+        <div class="separateur-bleu"></div>
+      </div>
+
+      <main class="contenu-principal">
+        <form class="formulaire-contact" action="contact2.html" method="get">
+          <h2>Contactez-nous</h2>
+          <div class="champ-formulaire">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="champ-formulaire">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="champ-formulaire">
+            <label for="sujet">Sujet :</label>
+            <input type="text" id="sujet" name="sujet" required>
+          </div>
+          <div class="champ-formulaire">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit"  class="btn-envoyer">Envoyer</button>
+        </form>
+      </main>
+      <div class="separateur" aria-hidden="true">
+      </div>
+
+    <footer class="pied-page">
+      <img class="trait" src="images/trait2.png" alt="trait"/>
+      <div class="pied-page-interne">
+        <a class="marque-pied" href="acceuil.html"
+          ><img src="images/logo-footer.png" alt="FormaLine"
+        /></a>
+                <p class="copyright-pied">
+          © Corporyght by Lheureux Sylvain pour FormaLine
+        </p>
+        <ul class="navigation-pied">
+          <li><a href="acceuil.html">Accueil</a></li>
+          <li><a href="produits.html">Produits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>
